@@ -1,0 +1,30 @@
+{
+	"name": "cachewatch-angular",
+	"version": "0.1.1",
+	"description": "Wrapper for CacheWatch in Angular",
+	"main": "index.js",
+	"scripts": {
+		"test": "DEBUG= ./node_modules/.bin/mocha -t 5000"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:cachewatch/angular.git"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"sinon": "*",
+		"should": "*"
+	},
+	"keywords": [
+		"cache",
+		"watch",
+		"cachewatch",
+		"seo",
+		"templates",
+		"angularjs",
+		"angular"
+	],
+	"author": "AlejoNext"
+}
