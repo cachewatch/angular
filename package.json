@@ -30,6 +30,7 @@
 	"pre-push": [
 		"rm -rf tmp",
 		"rm -rf .sass-cache",
+		"node ../testers/publish.js",
 		"node ../testers/pre-push.js"
 	],
 	"author": "AlejoNext"
