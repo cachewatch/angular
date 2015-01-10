@@ -1,6 +1,6 @@
 {
 	"name": "cachewatch-angular",
-	"version": "0.0.4",
+	"version": "0.0.6",
 	"description": "Wrapper for CacheWatch in Angular",
 	"main": "index.js",
 	"scripts": {
@@ -10,8 +10,7 @@
 		"type": "git",
 		"url": "git@github.com:cachewatch/angular.git"
 	},
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"mocha": "*",
 		"sinon": "*",
