@@ -1,6 +1,6 @@
 {
 	"name": "cachewatch-angular",
-	"version": "0.1.1",
+	"version": "0.0.4",
 	"description": "Wrapper for CacheWatch in Angular",
 	"main": "index.js",
 	"scripts": {
@@ -15,7 +15,8 @@
 	"devDependencies": {
 		"mocha": "*",
 		"sinon": "*",
-		"should": "*"
+		"should": "*",
+		"pre-git": "^0.1.1"
 	},
 	"keywords": [
 		"cache",
@@ -25,6 +26,11 @@
 		"templates",
 		"angularjs",
 		"angular"
+	],
+	"pre-push": [
+		"rm -rf tmp",
+		"rm -rf .sass-cache",
+		"node ../testers/pre-push.js"
 	],
 	"author": "AlejoNext"
 }
