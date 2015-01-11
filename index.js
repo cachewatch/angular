@@ -11,27 +11,31 @@ cacheWatch.service('cachewatch', ['$rootScope', function ($rootScope) {
 		$scope.status = 'ready';
 		if(!$scope.$$phase) $scope.$apply();
 	};
+
 	$rootScope.loading = function() {
 		var $scope = _getTopScope();
 		$scope.status = 'loading';
 		if(!$scope.$$phase) $scope.$apply();
 	};
+
 	$rootScope.$on('$routeChangeStart', function() {
 		_getTopScope().loading();
 	});
 
 	return {
-    ready : $rootScope.ready,
-    loading : $rootScope.loading
-  };
+		ready : $rootScope.ready,
+		loading : $rootScope.loading
+	};
 }]);
 
-cacheWatch.directive('body', ['cachewatch',function (cache){
+cacheWatch.directive('body', [function (){
 	return {
-		rrestrict  : 'E',
+		restrict : 'E',
 		link : function (scope, element) {
-		 var ele = angular.element(element);
-      ele.attr('data-ready', scope.status);
+			var ele = angular.element(element);
+			scope.$watch('status', function(status){
+				ele.attr('data-ready', status);
+			});
 		}
 	}
 }]);
