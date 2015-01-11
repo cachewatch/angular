@@ -3,11 +3,13 @@
 API on Angular
 
 ```javascript
-angular.module('MyApp',[ 'cachewatch'])
+angular
+	.module('MyApp',[ 'cachewatch'])
 	.controller([ '$scope', 'cachewatch', function($scope, cache){
 		cache.ready();
+		// or 
+		cache.loading();
 	}]);
-
 ```
 
 Look the body 
